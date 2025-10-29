@@ -1,7 +1,7 @@
+import { useModalStore} from '@/store/modalStore'
 import { useTranslation } from 'react-i18next'
-
-import { useModalStore } from '../store/modalStore'
 import { ModalElement } from './ModalElement'
+
 
 export const Home = () => {
 	const { openModal } = useModalStore()
@@ -21,3 +21,6 @@ export const Home = () => {
 		</div>
 	)
 }
+
+
+
