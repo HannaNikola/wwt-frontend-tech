@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-
 import { useModalStore } from '@/store/modalStore'
-
 import { FilterForm } from './FilterForm'
+
+
 
 export const ModalElement = () => {
 	const { closeModal, isModalOpen } = useModalStore()
@@ -30,7 +30,7 @@ export const ModalElement = () => {
         ${animate ? 'bg-black/50 opacity-100' : 'opacity-0'}`}
 		>
 			<div
-				className={`relative  w-7xl h-[2691px]  bg-white rounded-2xl shadow-2xl py-10 px-[34px] mt-20 mb-20 
+				className={`relative  w-7xl h-[2650px]  bg-white rounded-2xl shadow-2xl py-10 px-[34px] mt-20 mb-20 
                  ${animate ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
 			>
 				<button onClick={() => closeModal()}>

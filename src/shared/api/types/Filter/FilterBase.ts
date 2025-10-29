@@ -8,3 +8,6 @@ export interface FilterBase {
 	icon?: string
 	type: FilterType
 }
+
+
+
