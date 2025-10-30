@@ -33,7 +33,7 @@ export const ModalElement = () => {
 				className={`relative  w-7xl h-[2650px]  bg-white rounded-2xl shadow-2xl py-10 px-[34px] mt-20 mb-20 
                  ${animate ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
 			>
-				<button  onClick={() => closeModal()} className='absolute top-[54px] right-[35px] w-6 h-6'>
+				<button  onClick={() => closeModal()} className='absolute top-[54px] right-[35px] '>
                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>					
 				</button>
 				<FilterForm />
