@@ -1,141 +1,139 @@
+
 export const FilterFormValue = [
-        {
-            title:'Preliminary filter',
-            filters:[
-                'Distance to the center 1 km',
-                'Guest rating 9+',
-                'Hotels',
-                'Distance to the center 3 km',
-                '5 stars',
-                'Breakfast is included'
-
-            ]
-        },
-         {
-            title:'Popular filters',
-            filters:[
-                '5 stars ',
-                'Breakfast is included',
-                'Free booking',
-                '4 stars ',
-                'Distance to the center 3 km',
-                'Guest rating 8+'
-                
-            ]
-        },
-         {
-            title:'Amenities of the accommodation facility',
-            filters:[
-               'Transfer to/from the hotel',
-               'Breakfast included',
-               'Smoking area',
-               'Round-the-clock reception', 
-               'Restaurant ',
-               'Children`s playground',
-               'Early check-in',
-               'Swimming pool',
-               'Internet',
-               'Late check-in',
-               'Spa center/sauna',
-               'Security',
-               'Pets are allowed',
-               'Gym/fitness room',
-               'Lift',
-               'Parking',
-               'Conference rooms',
-               'Eco-responsibility'
-
-            ]
-        },
-       {
-         title:'Amenities for people with disabilities',
-            filters:[
-                'Entrance without steps',
-                'Parking ',
-                'Lift',
-                'Entrance 81 cm wide',
-                'Availability of a ramp',
-                'Handrails'
-            ]
-       },
-       {
-        title:'Room facilities',
-        filters:[
-            'Bath',
-            'Kitchen',
-            'Underfloor heating',
-            'Shower',
-            'Air Conditioning',
-            'Pets allowed',
-            'Coffee machine',
-            'Iron',
-            'Baby bed',
-            'Kettle',
-            'Internet',
-            'Balcony',
-            'Fridge',
-            'Workplace',
-        ]
-       },
-       {
-        title:'Room facilities for people with disabilities',
-        filters:[
-             'Main door entrance width 81 cm',
-            'Handrail in the shower',
-            'High toilet bowl',
-            'Interior door width 81 cm',
-            'Bath/shower chair',
-            'Instructions in Braille',
-            'Absence of steps',
-            'Barrier-free shower',
-            'Emergency cord in the bathroom',
-            'Handrail near the toilet',
-            'Low washbasin',
-            'Emergency cord by the bedside'
-        ]
-       },
-       {
-        title:'Nutrition',
-        filters:[
-           'Room without meals',
-           'Breakfast and dinner',
-           'All inclusive',
-           'Breakfast included',
-           'Breakfast, lunch, dinner',
-           'Ultra all inclusive'
-        ]
-       },
-       {
-        title:'Reservation cancellation policy',
-        filters:[
-            'Free cancellation before check-in',
-            'Free cancellation one week before check-in',
-            'Free cancellation up to 3 days before check-in',
-            'No possibility of cancellation'
-        ]
-       },
-       {
-        title:'Prepayment',
-        filters:[
-            'Booking without a credit card',
-            'Partial prepayment',
-            'Booking without prepayment',
-            'Full prepayment'
-        ]
-       },
-       {
-        title:'Form of payment',
-        filters:[
-            'Payment in cash',
-            'Payment by card'
-        ]
-       },
-       {
-        title:'Special offers and discounts',
-        filters:[
-            'Discounts of 50%',
-            'Hot offers',
-            'Cheap options for relocation'
-        ]
-       }
-    ]
+  {
+    title: 'Preliminary filter',
+    filters: [
+      { id: 'pre_1', name: 'Distance to the center 1 km' },
+      { id: 'pre_2', name: 'Guest rating 9+' },
+      { id: 'pre_3', name: 'Hotels' },
+      { id: 'pre_4', name: 'Distance to the center 3 km' },
+      { id: 'pre_5', name: '5 stars' },
+      { id: 'pre_6', name: 'Breakfast is included' },
+    ],
+  },
+  {
+    title: 'Popular filters',
+    filters: [
+      { id: 'pop_1', name: '5 stars' },
+      { id: 'pop_2', name: 'Breakfast is included' },
+      { id: 'pop_3', name: 'Free booking' },
+      { id: 'pop_4', name: '4 stars' },
+      { id: 'pop_5', name: 'Distance to the center 3 km' },
+      { id: 'pop_6', name: 'Guest rating 8+' },
+    ],
+  },
+  {
+    title: 'Amenities of the accommodation facility',
+    filters: [
+      { id: 'amen_1', name: 'Transfer to/from the hotel' },
+      { id: 'amen_2', name: 'Breakfast included' },
+      { id: 'amen_3', name: 'Smoking area' },
+      { id: 'amen_4', name: 'Round-the-clock reception' },
+      { id: 'amen_5', name: 'Restaurant' },
+      { id: 'amen_6', name: 'Children`s playground' },
+      { id: 'amen_7', name: 'Early check-in' },
+      { id: 'amen_8', name: 'Swimming pool' },
+      { id: 'amen_9', name: 'Internet' },
+      { id: 'amen_10', name: 'Late check-in' },
+      { id: 'amen_11', name: 'Spa center/sauna' },
+      { id: 'amen_12', name: 'Security' },
+      { id: 'amen_13', name: 'Pets are allowed' },
+      { id: 'amen_14', name: 'Gym/fitness room' },
+      { id: 'amen_15', name: 'Lift' },
+      { id: 'amen_16', name: 'Parking' },
+      { id: 'amen_17', name: 'Conference rooms' },
+      { id: 'amen_18', name: 'Eco-responsibility' },
+    ],
+  },
+  {
+    title: 'Amenities for people with disabilities',
+    filters: [
+      { id: 'dis_1', name: 'Entrance without steps' },
+      { id: 'dis_2', name: 'Parking' },
+      { id: 'dis_3', name: 'Lift' },
+      { id: 'dis_4', name: 'Entrance 81 cm wide' },
+      { id: 'dis_5', name: 'Availability of a ramp' },
+      { id: 'dis_6', name: 'Handrails' },
+    ],
+  },
+  {
+    title: 'Room facilities',
+    filters: [
+      { id: 'room_1', name: 'Bath' },
+      { id: 'room_2', name: 'Kitchen' },
+      { id: 'room_3', name: 'Underfloor heating' },
+      { id: 'room_4', name: 'Shower' },
+      { id: 'room_5', name: 'Air Conditioning' },
+      { id: 'room_6', name: 'Pets allowed' },
+      { id: 'room_7', name: 'Coffee machine' },
+      { id: 'room_8', name: 'Iron' },
+      { id: 'room_9', name: 'Baby bed' },
+      { id: 'room_10', name: 'Kettle' },
+      { id: 'room_11', name: 'Internet' },
+      { id: 'room_12', name: 'Balcony' },
+      { id: 'room_13', name: 'Fridge' },
+      { id: 'room_14', name: 'Workplace' },
+    ],
+  },
+  {
+    title: 'Room facilities for people with disabilities',
+    filters: [
+      { id: 'roomdis_1', name: 'Main door entrance width 81 cm' },
+      { id: 'roomdis_2', name: 'Handrail in the shower' },
+      { id: 'roomdis_3', name: 'High toilet bowl' },
+      { id: 'roomdis_4', name: 'Interior door width 81 cm' },
+      { id: 'roomdis_5', name: 'Bath/shower chair' },
+      { id: 'roomdis_6', name: 'Instructions in Braille' },
+      { id: 'roomdis_7', name: 'Absence of steps' },
+      { id: 'roomdis_8', name: 'Barrier-free shower' },
+      { id: 'roomdis_9', name: 'Emergency cord in the bathroom' },
+      { id: 'roomdis_10', name: 'Handrail near the toilet' },
+      { id: 'roomdis_11', name: 'Low washbasin' },
+      { id: 'roomdis_12', name: 'Emergency cord by the bedside' },
+    ],
+  },
+  {
+    title: 'Nutrition',
+    filters: [
+      { id: 'food_1', name: 'Room without meals' },
+      { id: 'food_2', name: 'Breakfast and dinner' },
+      { id: 'food_3', name: 'All inclusive' },
+      { id: 'food_4', name: 'Breakfast included' },
+      { id: 'food_5', name: 'Breakfast, lunch, dinner' },
+      { id: 'food_6', name: 'Ultra all inclusive' },
+    ],
+  },
+  {
+    title: 'Reservation cancellation policy',
+    filters: [
+      { id: 'cancel_1', name: 'Free cancellation before check-in' },
+      { id: 'cancel_2', name: 'Free cancellation one week before check-in' },
+      { id: 'cancel_3', name: 'Free cancellation up to 3 days before check-in' },
+      { id: 'cancel_4', name: 'No possibility of cancellation' },
+    ],
+  },
+  {
+    title: 'Prepayment',
+    filters: [
+      { id: 'prepay_1', name: 'Booking without a credit card' },
+      { id: 'prepay_2', name: 'Partial prepayment' },
+      { id: 'prepay_3', name: 'Booking without prepayment' },
+      { id: 'prepay_4', name: 'Full prepayment' },
+    ],
+  },
+  {
+    title: 'Form of payment',
+    filters: [
+      { id: 'pay_1', name: 'Payment in cash' },
+      { id: 'pay_2', name: 'Payment by card' },
+    ],
+  },
+  {
+    title: 'Special offers and discounts',
+    filters: [
+      { id: 'offer_1', name: 'Discounts of 50%' },
+      { id: 'offer_2', name: 'Hot offers' },
+      { id: 'offer_3', name: 'Cheap options for relocation' },
+    ],
+  },
+];

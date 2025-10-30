@@ -10,8 +10,6 @@ import { FilterFormValue } from '../shared/temp/filterFormValue'
 
 
 
-
-
 export const FilterForm = () => {
 	const { t } = useTranslation()
 	const { selected, setSelected, clearFilters } = useFilterStore()
@@ -33,10 +31,12 @@ export const FilterForm = () => {
 	const handleSubmit = (event: React.FormEvent) => {
 		event.preventDefault()
 
+		const allFilters = FilterFormValue.flatMap(section => section.filters)
+		const selectedFilters = allFilters.filter(f => checked.includes(f.id))
+		const normalize = selectedFilters.map(f => f.name.toLowerCase().trim())
+
 		const isFilterChoose = (f: any): f is FilterChoose =>
 			f.type === FilterType.OPTION
-
-		const normalize = checked.map(ch => ch.toLowerCase().trim())
 
 		const optionFilters = filterData.filterItems.filter(isFilterChoose)
 
@@ -75,8 +75,8 @@ export const FilterForm = () => {
 				})
 				.map(o => o.id)
 		}))
-		console.log('🚀 Итоговый SearchRequestFilter:', searchRequestFilters)
-		console.groupEnd()
+		
+		
 		queryClient.setQueryData(['filters'], searchRequestFilters)
 		setSelected(checked)
 		closeModal()
@@ -84,6 +84,7 @@ export const FilterForm = () => {
 
 	const handelClear = () => {
 		clearFilters()
+        queryClient.setQueryData(['filters'], []);
 		setChecked([])
 	}
 
@@ -99,46 +100,49 @@ export const FilterForm = () => {
 							className="border-t-2 border-[#B4B4B4] py-8"
 						>
 							<legend className="mb-6">{t(item.title)}</legend>
-							<div className="grid grid-cols-3 gap-4 justify-start">
-								{item.filters.map((filter, index) => (
+							<div className="grid grid-cols-3 gap-4 justify-start ">
+								{item.filters.map(filter => (
+                                    
 									<label
-										key={index}
-										htmlFor="filter"
+										key={filter.id}
+										htmlFor={filter.id}
+                                        className='flex items-center cursor-pointer'
 									>
 										<input
 											type="checkbox"
-											id={`filter-${sectionindex}-${index}`}
-											name={filter}
-											value={filter}
-											checked={checked.includes(filter)}
+											id={filter.id}
+											name={filter.name}
+											value={filter.id}
+											checked={checked.includes(filter.id)}
 											onChange={handelChecked}
-											className="mr-[18px]"
+											className="mr-[18px] w-5 h-5 cursor-pointer"
 										/>
-										{t(filter)}
+										{t(filter.name)}
 									</label>
+                                    
 								))}
 							</div>
 						</div>
 					))}
 				</fieldset>
 				<div className="border-t-2 border-[#B4B4B4] pt-8 flex justify-center items-center">
-                    <div className='flex justify-center flex-1'>
-					<button
-						type="submit"
-						className=" flex   justify-center w-[184px] h-16  bg-[#FF5F00] hover:bg-[#FF9E59] border-transparent rounded-2xl px-2 py-4 text-white  "
-					>
-						{t('Apply')}
-					</button>
-                    </div>
-                    <div className='flex justify-end '>
-					<button
-						type="button"
-						onClick={handelClear}
-						className=" flex font-medium text-[#078691] border-b-2 "
-					>
-						{t('Clear all parameters')}
-					</button>
-                    </div>
+					<div className="flex justify-center flex-1">
+						<button
+							type="submit"
+							className=" flex   justify-center w-[184px] h-16  bg-[#FF5F00] hover:bg-[#FF9E59] border-transparent rounded-2xl px-2 py-4 text-white cursor-pointer "
+						>
+							{t('Apply')}
+						</button>
+					</div>
+					<div className="flex justify-end ">
+						<button
+							type="button"
+							onClick={handelClear}
+							className=" flex font-medium text-[#078691] hover:text-[#7E7E7E] border-b-2 cursor-pointer"
+						>
+							{t('Clear all parameters')}
+						</button>
+					</div>
 				</div>
 			</form>
 		</>
